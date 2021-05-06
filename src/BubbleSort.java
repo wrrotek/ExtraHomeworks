@@ -14,29 +14,23 @@ public class BubbleSort {
         }
     }
 
-    public void printArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
-    }
-
     public void bubbleSorting(int[] array) {
-        int n = array.length;
+
         int compareNo = 0;
 
-        for (int i = 0; i < n - 1; i++) {
-            boolean isSoretd = true;
-            for (int j = 0; j < n - i - 1; j++) {
+        for (int i = 0; i < array.length - 1; i++) {
+            boolean isSorted = true;
+            for (int j = 0; j < array.length - i - 1; j++) {
                 compareNo++;
                 if (array[j] > array[j + 1]) {
                     int temp = 0;
                     temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
-                    isSoretd = false;
+                    isSorted = false;
                 }
             }
-            if (isSoretd)
+            if (isSorted)
                 break;
         }
         System.out.println(Arrays.toString(array));
