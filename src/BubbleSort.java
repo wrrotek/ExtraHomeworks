@@ -23,15 +23,15 @@ public class BubbleSort {
             for (int j = 0; j < array.length - i - 1; j++) {
                 compareNo++;
                 if (array[j] > array[j + 1]) {
-                    int temp = 0;
-                    temp = array[j];
+                    int temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
                     isSorted = false;
                 }
             }
-            if (isSorted)
+            if (isSorted) {
                 break;
+            }
         }
         System.out.println(Arrays.toString(array));
         System.out.println("Liczba porównań wynosi: " + compareNo);
